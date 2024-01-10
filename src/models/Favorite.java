@@ -1,10 +1,11 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Favorite {
     private User user;
-    private List<Announcement> announcements;
+    private List<Announcement> announcements = new ArrayList<>();
 
     public Favorite() {
     }
