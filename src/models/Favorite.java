@@ -3,38 +3,38 @@ package models;
 import java.util.List;
 
 public class Favorite {
-    private User userName;
-    private List<Announcement> announcement;
+    private User user;
+    private List<Announcement> announcements;
 
     public Favorite() {
     }
 
-    public Favorite(User userName, List<Announcement> announcement) {
-        this.userName = userName;
-        this.announcement = announcement;
+    public Favorite(User userName, List<Announcement> announcements) {
+        this.user = userName;
+        this.announcements = announcements;
     }
 
-    public User getUserName() {
-        return userName;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserName(User userName) {
-        this.userName = userName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public List<Announcement> getAnnouncement() {
-        return announcement;
+    public List<Announcement> getAnnouncements() {
+        return announcements;
     }
 
-    public void setAnnouncement(List<Announcement> announcement) {
-        this.announcement = announcement;
+    public void setAnnouncements(List<Announcement> announcement) {
+        this.announcements = announcement;
     }
 
     @Override
     public String toString() {
         return "Favorite{" +
-                "userName=" + userName +
-                ", announcement=" + announcement +
+                "userName=" + user +
+                ", announcements =" + announcements +
                 '}';
     }
 }
