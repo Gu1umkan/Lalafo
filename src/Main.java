@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.print("Hello and welcome!");
+        numberler();
 
             while (true) {
                 try {
@@ -93,5 +94,8 @@ public class Main {
                 9. GET ALL ANNOUNCEMENT BY USER ID       19.
                 10. GET ANNOUNCEMENT BY ID               20.
                 """);
+    }
+    public static void numberler(){
+        System.out.println("bir, eki, uch");
     }
 }
