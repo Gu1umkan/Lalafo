@@ -5,12 +5,12 @@ public class Announcement {
     private  String name;
     private String description;
     private int price;
-    private String owner;
+    private User owner;
 
     public Announcement() {
     }
 
-    public Announcement(String name, String description, int price, String owner) {
+    public Announcement(String name, String description, int price, User owner) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -41,11 +41,11 @@ public class Announcement {
         this.price = price;
     }
 
-    public String getOwner() {
+    public User getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
     public long getId(){

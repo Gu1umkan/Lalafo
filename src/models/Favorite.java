@@ -1,23 +1,23 @@
 package models;
 
 public class Favorite {
-    private User userName;
+    private User user;
     private Announcement announcement;
 
     public Favorite() {
     }
 
     public Favorite(User userName, Announcement announcement) {
-        this.userName = userName;
+        this.user = userName;
         this.announcement = announcement;
     }
 
-    public User getUserName() {
-        return userName;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserName(User userName) {
-        this.userName = userName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Announcement getAnnouncement() {
@@ -31,7 +31,7 @@ public class Favorite {
     @Override
     public String toString() {
         return "Favorite{" +
-                "userName=" + userName +
+                "userName=" + user +
                 ", announcement=" + announcement +
                 '}';
     }
