@@ -1,6 +1,7 @@
 package models;
 
 public class Announcement {
+    private long id;
     private  String name;
     private String description;
     private int price;
@@ -47,11 +48,16 @@ public class Announcement {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+    public long getId(){
+        return id;}
+    public void setId(long id){
+        this.id = id;}
 
     @Override
     public String toString() {
         return "\nAnnouncement{" +
-                "name: " + name + 
+                "    id"+ id+ 
+                "    name: " + name + 
                 "    description: " + description + 
                 "    price=" + price +
                 "    owner='" + owner + 
