@@ -1,11 +1,15 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private long id;
     private String userNAme;
     private String email;
     private String pass;
     private Role role;
+    private List<Announcement> announcements = new ArrayList<>();
 
     public User() {
     }
@@ -56,6 +60,14 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public List<Announcement> getAnnouncements() {
+        return announcements;
+    }
+
+    public void setAnnouncements(List<Announcement> announcements) {
+        this.announcements = announcements;
     }
 
     @Override
