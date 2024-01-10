@@ -1,13 +1,15 @@
 package models;
 
+import java.util.List;
+
 public class Favorite {
     private User userName;
-    private Announcement announcement;
+    private List<Announcement> announcement;
 
     public Favorite() {
     }
 
-    public Favorite(User userName, Announcement announcement) {
+    public Favorite(User userName, List<Announcement> announcement) {
         this.userName = userName;
         this.announcement = announcement;
     }
@@ -20,11 +22,11 @@ public class Favorite {
         this.userName = userName;
     }
 
-    public Announcement getAnnouncement() {
+    public List<Announcement> getAnnouncement() {
         return announcement;
     }
 
-    public void setAnnouncement(Announcement announcement) {
+    public void setAnnouncement(List<Announcement> announcement) {
         this.announcement = announcement;
     }
 
