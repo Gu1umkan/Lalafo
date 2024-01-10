@@ -1,15 +1,17 @@
 package models;
 
+import java.util.List;
+
 public class Favorite {
     private User user;
-    private Announcement announcement;
+    private List<Announcement> announcements;
 
     public Favorite() {
     }
 
-    public Favorite(User userName, Announcement announcement) {
+    public Favorite(User userName, List<Announcement> announcements) {
         this.user = userName;
-        this.announcement = announcement;
+        this.announcements = announcements;
     }
 
     public User getUser() {
@@ -20,19 +22,19 @@ public class Favorite {
         this.user = user;
     }
 
-    public Announcement getAnnouncement() {
-        return announcement;
+    public List<Announcement> getAnnouncements() {
+        return announcements;
     }
 
-    public void setAnnouncement(Announcement announcement) {
-        this.announcement = announcement;
+    public void setAnnouncements(List<Announcement> announcement) {
+        this.announcements = announcement;
     }
 
     @Override
     public String toString() {
         return "Favorite{" +
                 "userName=" + user +
-                ", announcement=" + announcement +
+                ", announcements =" + announcements +
                 '}';
     }
 }
