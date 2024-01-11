@@ -42,7 +42,7 @@ public class Main {
                         user.setId(GenerateId.getUserId());
                         Whail1:
                         while (true) {
-                            System.out.println("Введите имя пользователя: ");
+                            System.out.print("Введите имя пользователя:  ");
                             String name = scanner.nextLine();
                             if (!name.isEmpty()) {
                                 user.setUserName(name);
@@ -53,7 +53,7 @@ public class Main {
                         }
                         Whail2:
                         while (true) {
-                            System.out.println("Логин: ");
+                            System.out.print("Логин: ");
                             String email = scanner.nextLine();
                             if (!email.isEmpty()) {
                                 user.setEmail(email);
@@ -64,16 +64,16 @@ public class Main {
                         }
                         Whail3:
                         while (true) {
-                            System.out.println("Создайте пароль: ");
+                            System.out.print("Создайте пароль: ");
                             String pas = scanner.nextLine();
                             if (pas.length() > 3) {
                                 user.setPass(pas);
                                 break Whail3;
                             } else {
-                                System.err.println("Пароль должен быть не менше 4!");
+                                System.err.print("Пароль должен быть не менше 4!");
                             }
                         }
-                        System.out.println("Выберите роль: \n 1 -> Admin,  2 -> User,  3 Vendor");
+                        System.out.println("Выберите роль: \n 1 -> Admin,  2 -> User,  3 Vendor ");
                         switch (scanner.nextLine()) {
                             case "1" -> user.setRole(Role.ADMIN);
                             case "2" -> user.setRole(Role.USER);
@@ -82,7 +82,7 @@ public class Main {
                         System.out.println(userService.add(user));
                     }
                     case 2 -> {
-                        System.out.println("Введите id пользователя: ");
+                        System.out.print("Введите id пользователя: ");
                         long id = scanner1.nextLong();
                         System.out.println(userService.getUserById(id));
                     }
@@ -93,28 +93,28 @@ public class Main {
                     }
 
                     case 4 -> {
-                        System.out.println("Введите id пользователя которую хотите удалит");
+                        System.out.print("Введите id пользователя которую хотите удалить:  ");
                         long id = scanner1.nextLong();
                         System.out.println(userService.removeById(id));
                     }
                     case 5 -> {
-                        System.out.println("Введите id пользователя которую хотите изменит");
+                        System.out.print("Введите id пользователя которую хотите изменит:  ");
                         long id = scanner1.nextLong();
                         User users = new User();
                         Whail1:
                         while (true) {
-                            System.out.println("Введите имя: ");
+                            System.out.print("Введите имя:  ");
                             String name = scanner.nextLine();
                             if (!name.isEmpty()) {
                                 users.setUserName(name);
                                 break Whail1;
                             } else {
-                                System.err.println("Имя не может быть путым!");
+                                System.err.println("Имя не может быть пустым!");
                             }
                         }
                         Whail2:
                         while (true) {
-                            System.out.println("Логин: ");
+                            System.out.print("Логин:   ");
                             String email = scanner.nextLine();
                             if (!email.isEmpty()) {
                                 users.setEmail(email);
@@ -125,7 +125,7 @@ public class Main {
                         }
                         Whail3:
                         while (true) {
-                            System.out.println("Создайте пароль: ");
+                            System.out.print("Создайте пароль:  ");
                             String pas = scanner.nextLine();
                             if (pas.length() > 3) {
                                 users.setPass(pas);
@@ -147,13 +147,13 @@ public class Main {
                         User userr = null;
                         Announcement announcement = new Announcement();
                         announcement.setId(GenerateId.getAnnouncementId());
-                        System.out.println("Напишите имя объявление: ");
+                        System.out.print("Напишите имя объявление:  ");
                         String ann = scanner.nextLine();
                         announcement.setName(ann);
-                        System.out.println("Oписание объявления: ");
+                        System.out.print("Oписание объявления:  ");
                         String des = scanner.nextLine();
                         announcement.setDescription(des);
-                        System.out.println("Цена объявления: ");
+                        System.out.print("Цена объявления:  ");
                         int price = new Scanner(System.in).nextInt();
                         announcement.setPrice(price);
                         for (User user : newUserss) {
@@ -163,7 +163,7 @@ public class Main {
                         System.out.println(announcementService.add(announcement));
                     }
                     case 7 -> {
-                        System.out.println("Напишите id объявление: ");
+                        System.out.print("Напишите id объявление:  ");
                         long id = scanner1.nextLong();
                         System.out.println(announcementService.getAnnouncementById(id));
                     }
