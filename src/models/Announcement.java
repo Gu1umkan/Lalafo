@@ -55,12 +55,12 @@ public class Announcement {
 
     @Override
     public String toString() {
-        return "\nAnnouncement{" +
-                "    id"+ id+ 
-                "    name: " + name + 
-                "    description: " + description + 
-                "    price=" + price +
-                "    owner='" + owner + 
+        return "Announcement: " +"\n"+
+                "    id: "+ id+"\n"+
+                "    name: " + name+"\n"+
+                "    description: " + description +"\n"+
+                "    price: " + price +"\n"+
+                "    owner: " + owner + "\n"+
                 '}';
     }
 }
