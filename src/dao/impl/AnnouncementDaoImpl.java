@@ -56,7 +56,12 @@ public class AnnouncementDaoImpl implements AnnouncementDao, GeneralDao<Announce
     @Override
     public String add(Announcement announcement) {
         database.getAnnouncements().add(announcement);
-        return "Успешно добавлено!";
+        for (User user : database.getAllUser()) {
+            if(user.getId() == announcement.getOwner().getId()){
+                user.getAnnouncements().add(announcement);
+            }
+        }
+        return "Успешно добавлено объявление!";
     }
 
     @Override
@@ -68,6 +73,15 @@ public class AnnouncementDaoImpl implements AnnouncementDao, GeneralDao<Announce
                     for (Announcement favoriteAnnouncement : favorite.getAnnouncements()) {
                         if (favoriteAnnouncement.getId() == id) {
                             favorite.getAnnouncements().remove(favoriteAnnouncement);
+                            break;
+                        }
+                    }
+                }
+                for (User user : database.getAllUser()) {
+                    for (Announcement userAnnouncement : user.getAnnouncements()) {
+                        if(userAnnouncement.getId() == id){
+                            user.getAnnouncements().remove(userAnnouncement);
+                            break;
                         }
                     }
                 }
